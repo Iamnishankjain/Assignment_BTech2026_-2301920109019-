@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+
+interface A{
+    public void prints();
+    public void cal(int a);
+}
+
+class B implements A{
+    @Override
+    public void prints(){
+        System.out.println("I implemented: AdvancedArithmetic");
+    }
+    @Override
+    public void cal(int a){
+        int sum=0;
+        for(int i=1;i<=a;i++){
+            if(a%i==0){
+                sum+=i;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        B b=new B();
+        b.prints();
+        b.cal(sc.nextInt());
+    }
+}
